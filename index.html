@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="checkbox"]{
+            display : none;
+        }
+        #modal{
+            display: none;
+        }
+        
+        label { 
+            cursor : pointer;
+        }
+        #modal_container:checked ~ #modal{
+            display : block;
+            width : 300px;
+            height : 200px;
+            position: relative;
+            top : 50px;
+            left : 50px;
+            background-color : greenyellow;
+        }
+        
+        .header{
+            display : flex;
+            background-color: rgba(0, 0, 0, 0.205);
+            height : 100px;
+            width : 300px;
+        }
+
+        .header h2{
+            color : white;
+            padding: 20px 50px 0 70px;
+        }
+
+        #modal p{
+            padding: 20px 50px 0 70px;
+            color : black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="checkbox" id="modal_container">
+        <label for="modal_container">
+            <div>Click here</div>
+        </label>
+        <div id="modal">
+            <div class="header">
+                <h2>Modal Popups</h2>
+            </div>
+
+            <p>This is pure HTML and CSS Modal</p>
+        </div>
+    </div>
+</body>
+</html>
